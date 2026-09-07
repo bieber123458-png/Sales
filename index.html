@@ -417,6 +417,7 @@
     gap:14px;
     margin-top:44px;
   }
+  .pillars.pillars-8{ grid-template-columns:repeat(4, 1fr); }
   .pillar{
     background:var(--paper);
     border:1px solid var(--line);
@@ -438,6 +439,9 @@
   .pillar:nth-child(3) .ic{ background:var(--milktea-deep); }
   .pillar:nth-child(4) .ic{ background:var(--pink-deep); }
   .pillar:nth-child(5) .ic{ background:#8C7B65; }
+  .pillar:nth-child(6) .ic{ background:var(--sage-deep); }
+  .pillar:nth-child(7) .ic{ background:var(--mist-deep); }
+  .pillar:nth-child(8) .ic{ background:var(--pink-deep); }
 
   /* Screens showcase */
   .screens-block{
@@ -662,6 +666,7 @@
     .hero-grid{ grid-template-columns:1fr; gap:40px; }
     .hero-visual{ order:-1; max-width:360px; margin:0 auto; }
     .pillars{ grid-template-columns:repeat(3,1fr); }
+    .pillars.pillars-8{ grid-template-columns:repeat(4,1fr); }
     .who-grid{ grid-template-columns:repeat(3,1fr); }
     .screens-block{ grid-template-columns:1fr; }
     .screens-block:nth-child(even){ direction:ltr; }
@@ -676,6 +681,7 @@
     .pain-panel{ grid-template-columns:1fr; padding:4px 18px; }
     .pain-panel .pain-row:nth-child(5){ border-bottom:1px solid var(--line-soft); }
     .pillars{ grid-template-columns:repeat(2,1fr); }
+    .pillars.pillars-8{ grid-template-columns:repeat(2,1fr); }
     .who-grid{ grid-template-columns:repeat(2,1fr); }
     .nav-cta{ padding:9px 16px; font-size:13px; }
     .brandmark .name{ font-size:16px; }
@@ -722,37 +728,19 @@
     </div>
     <div class="hero-visual">
       <div class="device-frame">
-        <div class="screen">
-          <div class="mock-topbar">
-            <span class="mock-title">今日總覽</span>
-            <div class="mock-dot-row"><span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span></div>
-          </div>
-          <div class="mock-stat-grid">
-            <div class="mock-stat"><div class="lbl">今日預約</div><div class="val">6</div></div>
-            <div class="mock-stat"><div class="lbl">今日營收</div><div class="val">NT$ 9,600</div></div>
-          </div>
-          <div class="mock-list-row"><span class="time">10:00</span><span class="mock-chip" style="background:var(--mock-mist-deep)"></span><span class="name">王小姐</span><span class="svc">單色美甲</span></div>
-          <div class="mock-list-row"><span class="time">13:30</span><span class="mock-chip" style="background:var(--mock-sage-deep)"></span><span class="name">陳小姐</span><span class="svc">霧唇初次</span></div>
-          <div class="mock-list-row"><span class="time">16:00</span><span class="mock-chip" style="background:var(--mock-pink-deep)"></span><span class="name">林小姐</span><span class="svc">嫁接美睫</span></div>
-          <div class="mock-bars">
-            <div class="mock-bar" style="height:40%"></div>
-            <div class="mock-bar" style="height:65%"></div>
-            <div class="mock-bar" style="height:50%"></div>
-            <div class="mock-bar" style="height:82%"></div>
-            <div class="mock-bar" style="height:58%"></div>
-            <div class="mock-bar" style="height:70%"></div>
-          </div>
+        <div class="screen" style="padding:0; min-height:0; overflow:hidden; background:#fff;">
+          <img src="assets/screens/01-dashboard.png" alt="美業預約手帳總覽儀表板實際畫面" style="width:100%; display:block;">
         </div>
       </div>
       <div class="float-card f1">
-        <div class="float-tag">客戶累積消費</div>
-        <div class="float-num">NT$ 24,500</div>
+        <div class="float-tag">資料存放位置</div>
+        <div class="float-num" style="font-size:16px;">你的瀏覽器本機</div>
       </div>
       <div class="float-card f2">
-        <div class="float-tag">本月新客</div>
-        <div class="float-num">+ 12 位</div>
+        <div class="float-tag">主題色可換</div>
+        <div class="float-num">8 種</div>
       </div>
-      <p class="mock-note">＊示意畫面，正式上線請替換為實際產品截圖</p>
+      <p class="mock-note">＊實際產品畫面（示範資料），開始使用後會換成你自己的預約與客戶</p>
     </div>
   </div>
 </section>
@@ -784,12 +772,15 @@
       <h2>把你的美業日常，<br>整理成一套系統。</h2>
       <p>美業預約手帳不是單純的預約表，而是專門為美業工作者設計的日常經營工具——從預約到收入，都在同一個地方。</p>
     </div>
-    <div class="pillars">
+    <div class="pillars pillars-8">
       <div class="pillar"><div class="ic">約</div><div class="lb">預約管理</div></div>
-      <div class="pillar"><div class="ic">客</div><div class="lb">客戶管理</div></div>
-      <div class="pillar"><div class="ic">收</div><div class="lb">營收管理</div></div>
-      <div class="pillar"><div class="ic">訊</div><div class="lb">訊息管理</div></div>
+      <div class="pillar"><div class="ic">客</div><div class="lb">客戶檔案</div></div>
+      <div class="pillar"><div class="ic">收</div><div class="lb">營收＋成本</div></div>
+      <div class="pillar"><div class="ic">訊</div><div class="lb">訊息模板</div></div>
       <div class="pillar"><div class="ic">析</div><div class="lb">報表分析</div></div>
+      <div class="pillar"><div class="ic">簽</div><div class="lb">同意書電子簽名</div></div>
+      <div class="pillar"><div class="ic">值</div><div class="lb">儲值／促銷管理</div></div>
+      <div class="pillar"><div class="ic">存</div><div class="lb">備份／匯出</div></div>
     </div>
   </div>
 </section>
@@ -806,20 +797,11 @@
       <div class="screen-copy">
         <span class="num">01 — 總覽儀表板</span>
         <h3>打開就知道，今天要忙什麼。</h3>
-        <p>今日預約、今日營收、待處理事項，一次呈現在最前面。</p>
+        <p>今日預約、今日營收、本月累積、明日待處理，一次呈現在最前面，不用再自己拼湊資訊。</p>
       </div>
       <div class="screen-shot">
-        <div class="inner">
-          <div class="mock-topbar"><span class="mock-title">儀表板</span><div class="mock-dot-row"><span class="mock-dot"></span><span class="mock-dot"></span></div></div>
-          <div class="mock-stat-grid">
-            <div class="mock-stat"><div class="lbl">今日預約</div><div class="val">6</div></div>
-            <div class="mock-stat"><div class="lbl">待處理</div><div class="val">2</div></div>
-          </div>
-          <div class="mock-bars">
-            <div class="mock-bar" style="height:36%"></div><div class="mock-bar" style="height:58%"></div>
-            <div class="mock-bar" style="height:70%"></div><div class="mock-bar" style="height:44%"></div>
-            <div class="mock-bar" style="height:80%"></div><div class="mock-bar" style="height:62%"></div>
-          </div>
+        <div class="inner" style="padding:0;">
+          <img src="assets/screens/01-dashboard.png" alt="總覽儀表板實際畫面" style="width:100%; display:block; border-radius:8px;">
         </div>
       </div>
     </div>
@@ -828,32 +810,24 @@
       <div class="screen-copy">
         <span class="num">02 — 今日預約</span>
         <h3>今天有誰？打開就知道。</h3>
-        <p>今日預約、今日營收、待處理預約、明日待處理，全部一次看完。</p>
+        <p>當天預約一筆筆列出客人、項目、金額與付款狀態，還能直接複製提醒訊息、標記收款，下方接著看整月的可預約空檔月曆。</p>
       </div>
       <div class="screen-shot">
-        <div class="inner">
-          <div class="mock-topbar"><span class="mock-title">今日預約</span><div class="mock-dot-row"><span class="mock-dot"></span><span class="mock-dot"></span></div></div>
-          <div class="mock-list-row"><span class="time">09:30</span><span class="mock-chip" style="background:var(--mock-mist-deep)"></span><span class="name">周小姐</span><span class="svc">光療美甲</span></div>
-          <div class="mock-list-row"><span class="time">11:00</span><span class="mock-chip" style="background:var(--mock-sage-deep)"></span><span class="name">許小姐</span><span class="svc">補染睫毛</span></div>
-          <div class="mock-list-row"><span class="time">14:00</span><span class="mock-chip" style="background:var(--mock-pink-deep)"></span><span class="name">黃小姐</span><span class="svc">紋繡諮詢</span></div>
-          <div class="mock-list-row"><span class="time">17:30</span><span class="mock-chip" style="background:var(--mock-milktea-deep)"></span><span class="name">賴小姐</span><span class="svc">卸甲＋保養</span></div>
+        <div class="inner" style="padding:0;">
+          <img src="assets/screens/02-today.png" alt="今日預約實際畫面" style="width:100%; display:block; border-radius:8px;">
         </div>
       </div>
     </div>
 
     <div class="screens-block">
       <div class="screen-copy">
-        <span class="num">03 — 時間軸／空檔</span>
-        <h3>不用再慢慢算，空檔一眼看懂。</h3>
-        <p>哪些時段已經被預約、哪些時間還可以安排客人，一目了然。</p>
+        <span class="num">03 — 預約清單／回訪提醒</span>
+        <h3>不只是列表，還會提醒你該回訪誰。</h3>
+        <p>可依姓名、狀態、項目、日期篩選查詢；每個服務項目能設定建議回訪天數，時間到了自動列出該聯絡的客人。</p>
       </div>
       <div class="screen-shot">
-        <div class="inner">
-          <div class="mock-topbar"><span class="mock-title">時間軸</span><div class="mock-dot-row"><span class="mock-dot"></span><span class="mock-dot"></span></div></div>
-          <div class="mock-list-row"><span class="time">09–11</span><span class="mock-chip" style="background:var(--mock-pink-deep)"></span><span class="name">已預約</span><span class="svc">霧唇</span></div>
-          <div class="mock-list-row"><span class="time">11–12</span><span class="mock-chip" style="background:var(--mock-sage-deep)"></span><span class="name">空檔</span><span class="svc">可安排</span></div>
-          <div class="mock-list-row"><span class="time">12–14</span><span class="mock-chip" style="background:var(--mock-pink-deep)"></span><span class="name">已預約</span><span class="svc">美甲</span></div>
-          <div class="mock-list-row"><span class="time">14–17</span><span class="mock-chip" style="background:var(--mock-sage-deep)"></span><span class="name">空檔</span><span class="svc">可安排</span></div>
+        <div class="inner" style="padding:0;">
+          <img src="assets/screens/03-appts.png" alt="預約清單實際畫面" style="width:100%; display:block; border-radius:8px;">
         </div>
       </div>
     </div>
@@ -862,63 +836,41 @@
       <div class="screen-copy">
         <span class="num">04 — 客戶管理</span>
         <h3>客人來過幾次、消費多少，一目了然。</h3>
-        <p>預約次數、累積消費、最近到店時間，完整記錄每一位客人。</p>
+        <p>預約次數、累積消費、儲值餘額、最近到店時間，完整記錄每一位客人，還能上傳施作前後照片留存。</p>
       </div>
       <div class="screen-shot">
-        <div class="inner">
-          <div class="mock-topbar"><span class="mock-title">客戶檔案</span><div class="mock-dot-row"><span class="mock-dot"></span><span class="mock-dot"></span></div></div>
-          <div class="mock-stat-grid">
-            <div class="mock-stat"><div class="lbl">預約次數</div><div class="val">9</div></div>
-            <div class="mock-stat"><div class="lbl">累積消費</div><div class="val">NT$ 18,200</div></div>
-          </div>
-          <div class="mock-list-row"><span class="time">最近</span><span class="mock-chip" style="background:var(--mock-mist-deep)"></span><span class="name">08/12 到店</span><span class="svc">單色美甲</span></div>
-          <div class="mock-list-row"><span class="time">上次</span><span class="mock-chip" style="background:var(--mock-mist-deep)"></span><span class="name">07/20 到店</span><span class="svc">卸甲補色</span></div>
+        <div class="inner" style="padding:0;">
+          <img src="assets/screens/04-customers.png" alt="客戶管理實際畫面" style="width:100%; display:block; border-radius:8px;">
         </div>
       </div>
     </div>
 
     <div class="screens-block">
       <div class="screen-copy">
-        <span class="num">05 — 訊息模板</span>
-        <h3>常用訊息，不用每次重新打。</h3>
-        <p>預約提醒、術後注意事項、感謝訊息、生日祝福，一鍵複製傳送。</p>
-      </div>
-      <div class="screen-shot">
-        <div class="inner">
-          <div class="mock-topbar"><span class="mock-title">訊息模板</span><div class="mock-dot-row"><span class="mock-dot"></span><span class="mock-dot"></span></div></div>
-          <div class="mock-list-row"><span class="mock-chip" style="background:var(--mock-mist-deep)"></span><span class="name">預約提醒</span><span class="svc">明日 14:00</span></div>
-          <div class="mock-list-row"><span class="mock-chip" style="background:var(--mock-sage-deep)"></span><span class="name">術後注意事項</span><span class="svc">睫毛保養</span></div>
-          <div class="mock-list-row"><span class="mock-chip" style="background:var(--mock-pink-deep)"></span><span class="name">感謝訊息</span><span class="svc">到店感謝</span></div>
-          <div class="mock-list-row"><span class="mock-chip" style="background:var(--mock-milktea-deep)"></span><span class="name">生日祝福</span><span class="svc">專屬祝福</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="screens-block">
-      <div class="screen-copy">
-        <span class="num">06 — 報表 ／ 07 — 月報表存檔</span>
+        <span class="num">05 — 報表分析</span>
         <h3>不要只知道自己很忙，要知道自己賺多少。</h3>
-        <p>本月營收、上月營收、平均客單價、新客數，近六個月趨勢一次看懂，每月自動存檔留下經營紀錄。</p>
+        <p>本月 vs 上月營收與預約數成長、平均客單價、新客數、扣掉成本後的淨利，近六個月趨勢一次看懂，還能產生月報表存檔留底對帳。</p>
       </div>
       <div class="screen-shot">
-        <div class="inner">
-          <div class="mock-topbar"><span class="mock-title">營收報表</span><div class="mock-dot-row"><span class="mock-dot"></span><span class="mock-dot"></span></div></div>
-          <div class="mock-stat-grid">
-            <div class="mock-stat"><div class="lbl">本月營收</div><div class="val">NT$ 86,400</div></div>
-            <div class="mock-stat"><div class="lbl">平均客單價</div><div class="val">NT$ 1,850</div></div>
-          </div>
-          <div class="mock-bars">
-            <div class="mock-bar" style="height:40%; background:linear-gradient(180deg, var(--mock-sage), var(--mock-sage-deep));"></div>
-            <div class="mock-bar" style="height:52%; background:linear-gradient(180deg, var(--mock-sage), var(--mock-sage-deep));"></div>
-            <div class="mock-bar" style="height:48%; background:linear-gradient(180deg, var(--mock-sage), var(--mock-sage-deep));"></div>
-            <div class="mock-bar" style="height:66%; background:linear-gradient(180deg, var(--mock-sage), var(--mock-sage-deep));"></div>
-            <div class="mock-bar" style="height:74%; background:linear-gradient(180deg, var(--mock-sage), var(--mock-sage-deep));"></div>
-            <div class="mock-bar" style="height:90%; background:linear-gradient(180deg, var(--mock-sage), var(--mock-sage-deep));"></div>
-          </div>
+        <div class="inner" style="padding:0;">
+          <img src="assets/screens/05-reports.png" alt="報表分析實際畫面" style="width:100%; display:block; border-radius:8px;">
         </div>
       </div>
     </div>
-    <p class="mock-note" style="margin-top:-40px;">＊以上為示意畫面，建議替換為實際產品截圖以增加信任感</p>
+
+    <div class="screens-block">
+      <div class="screen-copy">
+        <span class="num">06 — 店家設定工具</span>
+        <h3>換上你自己的風格，不是罐頭系統。</h3>
+        <p>店名、8 種主題色系、服務項目、促銷活動、訊息模板、紋繡同意書內容，全部都能自己調整成你工作室的樣子。</p>
+      </div>
+      <div class="screen-shot">
+        <div class="inner" style="padding:0;">
+          <img src="assets/screens/06-settings.png" alt="店家設定實際畫面" style="width:100%; display:block; border-radius:8px;">
+        </div>
+      </div>
+    </div>
+    <p class="mock-note" style="margin-top:-40px;">＊以上皆為工具實際運作畫面，內容為示範資料，你使用時會顯示自己輸入的預約與客戶</p>
   </div>
 </section>
 
@@ -1001,17 +953,21 @@
     </div>
     <div class="price-card">
       <p class="pname">美業預約手帳</p>
-      <p class="psub">預約 × 客戶 × 營收，一次整理</p>
-      <div class="price-amount">PRICE_HERE <span>／ 方案</span></div>
+      <p class="psub">買斷一次，終身使用，無月費</p>
+      <div class="price-amount">NT$ PRICE_HERE <span>／ 買斷</span></div>
       <ul class="price-list">
-        <li><span class="mark">✓</span>預約管理</li>
-        <li><span class="mark">✓</span>客戶管理</li>
-        <li><span class="mark">✓</span>營收管理</li>
-        <li><span class="mark">✓</span>訊息模板</li>
-        <li><span class="mark">✓</span>報表分析</li>
+        <li><span class="mark">✓</span>預約管理＋今日總覽儀表板</li>
+        <li><span class="mark">✓</span>客戶檔案（含施作前後照片）</li>
+        <li><span class="mark">✓</span>營收報表＋成本記錄＋淨利計算</li>
+        <li><span class="mark">✓</span>訊息模板＋回訪自動提醒</li>
+        <li><span class="mark">✓</span>促銷活動／儲值扣款管理</li>
+        <li><span class="mark">✓</span>紋繡同意書＋客戶電子簽名</li>
+        <li><span class="mark">✓</span>8 種主題色，換上你自己的風格</li>
+        <li><span class="mark">✓</span>資料存在你的瀏覽器，備份／還原、CSV 匯出</li>
+        <li><span class="mark">✓</span>LINE 客服支援</li>
       </ul>
-      <a href="https://api.payuni.com.tw/api/uop/receive_info/2/1/HTCU1150201000353/MbjVYr1d9cIj43kRGyzy6" class="btn btn-primary btn-block">立即取得</a>
-      <p class="price-foot">立即開始整理你的預約與客戶。</p>
+      <a href="https://api.payuni.com.tw/api/uop/receive_info/2/1/HTCU1150201000353/MbjVYr1d9cIj43kRGyzy6" class="btn btn-primary btn-block">立即取得美業預約手帳</a>
+      <p class="price-foot">付款完成後，我們會將工具連結與使用教學寄送給你，開始整理你的預約與客戶。</p>
     </div>
   </div>
 </section>
@@ -1025,20 +981,28 @@
     </div>
     <div class="faq-list">
       <details class="faq-item" open>
+        <summary>買了之後我會收到什麼？要怎麼用？</summary>
+        <p class="a">你會收到一個網頁工具（單一網頁檔案），不用註冊帳號、不用安裝 App，用手機或電腦的瀏覽器打開就能直接使用。所有預約、客戶、營收資料都存在你自己的瀏覽器裡，換裝置或清除瀏覽器資料前，記得先用內建的備份功能匯出一份存檔。</p>
+      </details>
+      <details class="faq-item">
         <summary>我是自己一個人接客，也適合嗎？</summary>
         <p class="a">適合。這套工具就是希望讓一人工作室也能簡單管理自己的預約、客戶與營收。</p>
       </details>
       <details class="faq-item">
         <summary>我是美睫／美甲／霧唇師可以使用嗎？</summary>
-        <p class="a">可以，只要你的工作模式是預約制，就可以依照自己的服務內容建立項目。</p>
+        <p class="a">可以，只要你的工作模式是預約制，就可以依照自己的服務內容建立項目；紋繡類服務還內建同意書電子簽名功能。</p>
       </details>
       <details class="faq-item">
         <summary>我不會使用複雜系統怎麼辦？</summary>
-        <p class="a">設計方向就是簡單、直覺，讓你可以快速掌握每天的預約與客戶狀況。</p>
+        <p class="a">設計方向就是簡單、直覺，讓你可以快速掌握每天的預約與客戶狀況；使用上有任何問題，也可以加入內建的客服 LINE 詢問。</p>
       </details>
       <details class="faq-item">
-        <summary>可以管理不同服務嗎？</summary>
-        <p class="a">可以建立自己的服務項目。</p>
+        <summary>可以管理不同服務嗎？可以換成自己的風格嗎？</summary>
+        <p class="a">可以自己建立服務項目、設定各項目的服務時長與建議回訪天數，還能從 8 種主題色系中選一套換上，讓工具符合你工作室的風格。</p>
+      </details>
+      <details class="faq-item">
+        <summary>需要一直連網才能用嗎？資料安全嗎？</summary>
+        <p class="a">資料只存在你自己的瀏覽器裡，不會上傳到我們的伺服器，所以也不需要擔心資料外流的問題；但也因為這樣，資料不會自動雲端同步到別台裝置，換裝置請務必記得先匯出備份檔再匯入還原。</p>
       </details>
     </div>
   </div>
