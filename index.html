@@ -563,26 +563,87 @@
   }
   .value-big .no{ color:var(--ink-faint); text-decoration:line-through; text-decoration-color:var(--pink-deep); }
   .value-big .yes{ color:var(--milktea-deep); }
+  .value-mini-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:14px;
+    margin-top:40px;
+    text-align:left;
+  }
+  .value-mini{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius-sm);
+    padding:18px 18px;
+  }
+  .value-mini .n{
+    font-family:'Noto Serif TC', serif;
+    font-weight:700;
+    font-size:15px;
+    color:var(--milktea-deep);
+  }
+  .value-mini .t{
+    font-size:13px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin-top:6px;
+  }
 
   /* Pricing */
-  .price-card{
-    max-width:460px;
+  .price-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    max-width:920px;
     margin:0 auto;
+    align-items:start;
+  }
+  .price-grid.price-grid-single{
+    grid-template-columns:1fr;
+    max-width:460px;
+  }
+  .price-compare{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    line-height:1.7;
+    background:rgba(255,255,255,0.04);
+    border:1px solid var(--line-soft);
+    border-radius:12px;
+    padding:10px 14px;
+    margin:18px 0 0;
+  }
+  .price-card{
     background:var(--paper);
-    border:1.5px solid var(--milktea);
+    border:1.5px solid var(--line);
     border-radius:28px;
     padding:44px 38px;
-    box-shadow:var(--shadow);
+    box-shadow:var(--shadow-sm);
     text-align:center;
     position:relative;
   }
-  .price-card::before{
+  .price-card.pro{
+    border-color:var(--milktea);
+    box-shadow:var(--shadow);
+    background:linear-gradient(180deg, var(--surface), var(--paper));
+  }
+  .price-card.pro::before{
     content:"";
     position:absolute; inset:-10px;
     border:1px dashed var(--line);
     border-radius:32px;
     z-index:-1;
   }
+  .price-badge{
+    position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+    background:linear-gradient(180deg, var(--pink), var(--pink-deep));
+    color:#2F1E20;
+    font-size:12px; font-weight:700;
+    padding:6px 16px;
+    border-radius:999px;
+    white-space:nowrap;
+    box-shadow:var(--shadow-sm);
+  }
+  .price-list .mark.new{ color:var(--milktea-deep); }
   .price-card .pname{
     font-family:'Noto Serif TC', serif;
     font-size:19px; font-weight:700;
@@ -672,6 +733,8 @@
     .screens-block:nth-child(even){ direction:ltr; }
     .compare-wrap{ grid-template-columns:1fr; }
     .compare-mid{ max-width:none; }
+    .price-grid{ grid-template-columns:1fr; max-width:460px; }
+    .value-mini-grid{ grid-template-columns:1fr; }
   }
   @media (max-width: 640px){
     .wrap{ padding:0 18px; }
@@ -902,10 +965,12 @@
         <ul>
           <li><span class="mark">✓</span>預約集中管理</li>
           <li><span class="mark">✓</span>空檔一眼看懂</li>
-          <li><span class="mark">✓</span>客戶資料完整</li>
-          <li><span class="mark">✓</span>訊息快速複製</li>
-          <li><span class="mark">✓</span>營收自動整理</li>
-          <li><span class="mark">✓</span>每月都有經營紀錄</li>
+          <li><span class="mark">✓</span>客戶資料完整，含施作前後照片</li>
+          <li><span class="mark">✓</span>訊息快速複製，回訪自動提醒</li>
+          <li><span class="mark">✓</span>營收扣成本，淨利自動算好</li>
+          <li><span class="mark">✓</span>紋繡同意書電子簽名，交件更專業</li>
+          <li><span class="mark">✓</span>換上自己的品牌色，不是罐頭系統</li>
+          <li><span class="mark">✓</span>每月都有經營紀錄留底</li>
         </ul>
       </div>
     </div>
@@ -938,6 +1003,11 @@
     <h2 style="margin-top:16px;">你的客人越來越多，<br>你的管理方式也該升級了。</h2>
     <p class="lead">當你還只有幾位客人的時候，靠記憶可能沒問題。但當預約開始增加，你會發現真正讓你疲累的，不只是工作本身，而是每天找資料、確認時間、回訊息、整理客戶、計算收入。</p>
     <p class="value-big">你需要的<span class="no">不是更努力</span>，<br>而是<span class="yes">一套幫你整理混亂的系統</span>。</p>
+    <div class="value-mini-grid">
+      <div class="value-mini"><div class="n">省下</div><div class="t">每天翻找預約、算收入的時間</div></div>
+      <div class="value-mini"><div class="n">看起來</div><div class="t">更專業——同意書電子簽名、自己的品牌色</div></div>
+      <div class="value-mini"><div class="n">買一次</div><div class="t">終身使用，不用每月扣款</div></div>
+    </div>
     <div class="hero-ctas" style="justify-content:center; margin-top:40px;">
       <a href="https://api.payuni.com.tw/api/uop/receive_info/2/1/HTCU1150201000353/MbjVYr1d9cIj43kRGyzy6" class="btn btn-primary">立即取得美業預約手帳</a>
     </div>
@@ -950,24 +1020,31 @@
     <div class="section-head">
       <span class="eyebrow">開始使用</span>
       <h2>一套屬於你的美業經營工具</h2>
+      <p>買斷一次、終身使用，沒有月費、沒有隱藏費用。</p>
     </div>
-    <div class="price-card">
-      <p class="pname">美業預約手帳</p>
-      <p class="psub">買斷一次，終身使用，無月費</p>
-      <div class="price-amount">NT$ PRICE_HERE <span>／ 買斷</span></div>
-      <ul class="price-list">
-        <li><span class="mark">✓</span>預約管理＋今日總覽儀表板</li>
-        <li><span class="mark">✓</span>客戶檔案（含施作前後照片）</li>
-        <li><span class="mark">✓</span>營收報表＋成本記錄＋淨利計算</li>
-        <li><span class="mark">✓</span>訊息模板＋回訪自動提醒</li>
-        <li><span class="mark">✓</span>促銷活動／儲值扣款管理</li>
-        <li><span class="mark">✓</span>紋繡同意書＋客戶電子簽名</li>
-        <li><span class="mark">✓</span>8 種主題色，換上你自己的風格</li>
-        <li><span class="mark">✓</span>資料存在你的瀏覽器，備份／還原、CSV 匯出</li>
-        <li><span class="mark">✓</span>LINE 客服支援</li>
-      </ul>
-      <a href="https://api.payuni.com.tw/api/uop/receive_info/2/1/HTCU1150201000353/MbjVYr1d9cIj43kRGyzy6" class="btn btn-primary btn-block">立即取得美業預約手帳</a>
-      <p class="price-foot">付款完成後，我們會將工具連結與使用教學寄送給你，開始整理你的預約與客戶。</p>
+    <div class="price-grid price-grid-single">
+
+      <div class="price-card pro">
+        <span class="price-badge">功能最完整</span>
+        <p class="pname">美業預約手帳</p>
+        <p class="psub">預約、客戶、營收、經營細節，一次整理</p>
+        <div class="price-amount">NT$ 1,990 <span>／ 買斷</span></div>
+        <p class="price-compare">同類美業系統常見月費 NT$300～600，買斷一次大約等於訂閱 4～6 個月的價格，之後就一直是你的，沒有下一筆扣款。</p>
+        <ul class="price-list">
+          <li><span class="mark">✓</span>預約管理＋今日總覽儀表板</li>
+          <li><span class="mark">✓</span>客戶檔案（含施作前後照片）</li>
+          <li><span class="mark">✓</span>營收報表＋成本記錄＋淨利計算</li>
+          <li><span class="mark">✓</span>訊息模板＋回訪自動提醒</li>
+          <li><span class="mark">✓</span>促銷活動／儲值扣款管理</li>
+          <li><span class="mark">✓</span>紋繡同意書＋客戶電子簽名</li>
+          <li><span class="mark">✓</span>8 種主題色，換上你自己的風格</li>
+          <li><span class="mark">✓</span>資料存在你的瀏覽器，備份／還原、CSV 匯出</li>
+          <li><span class="mark">✓</span>LINE 客服支援</li>
+        </ul>
+        <a href="https://api.payuni.com.tw/api/uop/receive_info/2/1/HTCU1150201000353/MbjVYr1d9cIj43kRGyzy6" class="btn btn-primary btn-block">立即取得美業預約手帳</a>
+        <p class="price-foot">付款完成後，我們會將工具連結與使用教學寄送給你。</p>
+      </div>
+
     </div>
   </div>
 </section>
